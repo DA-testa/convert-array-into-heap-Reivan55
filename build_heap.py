@@ -32,12 +32,6 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
     
-    elif first_input == 'F':
-        file_name = input().strip()
-        with open(file_name, 'r') as f:
-            n = int(f.readline())
-            data = list(map(int, f.readline().split()))
-    
     else:
         n = int(first_input)
         data = list(map(int, input().split()))
@@ -51,7 +45,7 @@ def main():
         print(i, j)
 
 
-
 if __name__ == "__main__":
     main()
+
 
