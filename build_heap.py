@@ -32,6 +32,10 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
     
+    elif first_input == 'F':
+        n = int(input())
+        data = list(map(int, input().split()))
+    
     else:
         n = int(first_input)
         data = list(map(int, input().split()))
@@ -47,5 +51,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
 
 
