@@ -24,8 +24,23 @@ def build_heap(data):
 
 
 def main():
-    n = int(input())
-    data = list(map(int, input().split()))
+    
+    first_input = input().strip()
+
+    
+    if first_input == 'I':
+        n = int(input())
+        data = list(map(int, input().split()))
+    
+    elif first_input == 'F':
+        file_name = input().strip()
+        with open(file_name, 'r') as f:
+            n = int(f.readline())
+            data = list(map(int, f.readline().split()))
+    
+    else:
+        n = int(first_input)
+        data = list(map(int, input().split()))
 
     assert len(data) == n
 
@@ -34,6 +49,7 @@ def main():
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
+
 
 
 if __name__ == "__main__":
